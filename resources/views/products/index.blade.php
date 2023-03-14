@@ -37,7 +37,7 @@
     <div class="container">
         <h1>Product View</h1>
         <form action="{{ route('create') }}" method="GET">
-            <button type="submit" class="btn btn-primary create">Agregar producto</button>
+            <button type="submit" class="btn btn-primary create">Add Product</button>
         </form>
     </div>
 
