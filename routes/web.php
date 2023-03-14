@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('products.index');
 });
 
-Route::get('/products/index/{create-id}/create', 'ProductController@create')->name('addProduct');
+Route::get('/products/create', [ProductController::class,'create'])->name('create');

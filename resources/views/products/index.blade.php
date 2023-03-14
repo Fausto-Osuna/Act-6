@@ -7,28 +7,40 @@
     <style>
         body{
             display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: #243447;
         }
-        button{
-            background-color: #476C9B;
+        .create{
+            background-color: #D19C1D;
             text-decoration: none;
-            color: white;
-            text-align: center;
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
             font-size: 24px;
-            place-self: center;
             cursor: pointer;
+            border: 1px;
         }
-        button:hover{
+        .create:hover{
             opacity: 0.8;
         }
-        h1{
-            text-align: center;
+        h1 {
+            color: white;
         }
+
+        .container{
+            margin: auto;
+        }
+
     </style>
     <title>Product View</title>
 </head>
 <body>
-    <h1>Product View</h1>
-    <button type="button" onClick="window.location='{{ route('addProduct'); }}'">Add Product</button>
+    <div class="container">
+        <h1>Product View</h1>
+        <form action="{{ route('create') }}" method="GET">
+            <button type="submit" class="btn btn-primary create">Agregar producto</button>
+        </form>
+    </div>
+
+
 </body>
 </html>
